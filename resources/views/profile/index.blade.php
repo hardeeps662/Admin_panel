@@ -1,0 +1,1 @@
+<a href="{{route('profile.create')}}">add profile</a>
