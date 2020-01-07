@@ -33,6 +33,7 @@ class HomeController extends Controller
         
         $post=Post::all();
         return view('home',compact('post','profile'));
+        
     }
 
   

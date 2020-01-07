@@ -8,7 +8,7 @@
         max-width: 120px;
     }
 
-</style>
+</style> 
 <div class="container">
     <div class="card">
     <div class="card-header">Posts of User</div>
@@ -22,18 +22,26 @@
  </div>
  <div class="col-md-7">
    
-             @foreach($post as $post)
-             <h4>{{$post->id}}: Post Title</h4>{{$post->title}}
-             <h4>comment</h4>{{$post->detail}}<br><br>
-
-              <a class="btn btn-primary btn-sm"href="{{route('post.show',$post->id)}}">view</a>  
-              @if(Auth::id()==1)
+    @foreach($post as $post)
+        <h2>{{$post->title}}</h2>
+        <p>{{$post->detail}}</p><br><br>
+          
+          <img width="250px" src="{{asset($path)}}" alt="" class="">
+          <br>
+          <br>
+        <a class="btn btn-primary btn-sm"href="{{route('post.show',$post->id)}}">view</a>  
+          @if(Auth::id()==1)
               <a class="btn btn-success btn-sm"href="{{route('post.edit',$post->id)}}">edit</a> 
-              @endif
-                       @endforeach
+          @endif 
+
+          <br>
+          <br>
+          <hr>
+    @endforeach
                  
 
 </div>
+
  </div>   
 </div>
 </div>
